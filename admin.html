@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+    <div class="glass-panel">
+        <i class="ri-apple-fill icon"></i>
+        <div class="text">
+            <h1>Secure Access for Apple Admins</h1>
+            <form action="index.html">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="glass-button">Login</button>
+            </form>
+
+            <!-- Sign up link -->
+            <div class="signup-text">
+                <p>If you don't have an account, <a href="adminSignUp.html">sign up here</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to validate the form
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Get form values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            // Regular expressions for validation
+            const usernameRegex = /^[a-zA-Z]+$/; // Username should contain only alphabets
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; // Password: At least 6 characters, 1 uppercase, 1 lowercase, 1 number
+    
+            // Validate username
+            if (!usernameRegex.test(username)) {
+                alert("Username must contain only letters.");
+                return false;
+            }
+    
+            // Validate password
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long, contain at least one number, one uppercase, and one lowercase letter.");
+                return false;
+            }
+    
+            // If all validations pass
+            alert("Login successful!");
+            this.submit(); // Proceed with form submission
+        });
+    </script>
+    
+</body>
+
+</html>

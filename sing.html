@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        body {
+            background: url("./img/head.jpg") no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(18px);
+            /* width: 100%; */
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .text {
+            width: 100%;
+            text-shadow: 2px 2px 0px rgb(0, 0, 0);
+            padding: 20px 45px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+
+        .form-group option {
+            color: #111;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border: 1px solid #fff;
+        }
+
+        .glass-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 0;
+            text-decoration: none;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            scale: 1.1;
+        }
+
+        .login-text {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .login-text a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .login-text p {
+            text-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass-panel">
+        <i class="ri-apple-fill icon"></i>
+        <div class="text">
+            <h1>Get Started with Your Apple ID</h1>
+            <form action="login.html">
+
+                <!-- id name -->
+                <div class="form-group">
+                    <label for="AppleId">Apple User ID:</label>
+                    <input type="text" id="AppleId" name="AppleId" required>
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+
+                <!-- last name -->
+                <div class="form-group">
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button type="submit" class="glass-button">Sign Up</button>
+            </form>
+
+            <!-- Already have an account link -->
+            <div class="login-text">
+                <p>Already have an account? <a href="admin.html">Login here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional for interactions like dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+        <script>
+            // Function to validate the form
+            document.querySelector('form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                // Get form values
+                const appleId = document.getElementById('AppleId').value;
+                const firstName = document.getElementById('firstname').value;
+                const lastName = document.getElementById('lastname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+        
+                // Regular expressions for validation
+                const nameRegexs = /^[a-zA-Z0-9]+$/; // Name should contain only alphabets
+                const nameRegex = /^[a-zA-Z]+$/; // Name should contain only alphabets
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; // Basic email pattern
+                const phoneRegex = /^[0-9]{10}$/; // Phone number should be 10 digits
+                const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; // Password: At least 6 characters, 1 uppercase, 1 lowercase, 1 number
+        
+                // Validate Apple User ID (similar to username, alphabet check)
+                if (!nameRegexs.test(appleId)) {
+                    alert("Apple User ID must contain only letters.");
+                    return false;
+                }
+        
+                // Validate first name
+                if (!nameRegex.test(firstName)) {
+                    alert("First Name must contain only letters.");
+                    return false;
+                }
+        
+                // Validate last name
+                if (!nameRegex.test(lastName)) {
+                    alert("Last Name must contain only letters.");
+                    return false;
+                }
+        
+                // Validate email format
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+        
+                // Validate phone number
+                if (!phoneRegex.test(phone)) {
+                    alert("Phone number must be 10 digits.");
+                    return false;
+                }
+        
+                // Validate password
+                if (!passwordRegex.test(password)) {
+                    alert("Password must be at least 6 characters long, contain at least one number, one uppercase and one lowercase letter.");
+                    return false;
+                }
+        
+                // Validate confirm password matches password
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+        
+                // If all validations pass
+                alert("Form submitted successfully!");
+                this.submit(); // Proceed with form submission
+            });
+        </script>
+        
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: url("./img/head.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.glass-panel {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 15px;
+    padding: 32px;
+    backdrop-filter: blur(18px);
+}
+
+.glass-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.icon {
+    font-size: 50px;
+    color: #fff;
+    display: inline-block;
+}
+
+.glass-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    scale: 1.1;
+}
+
+
+.glass-panel {
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+/* ... (previous CSS styles) ... */
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 60%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.signup-text {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.signup-text p {
+    font-weight: lighter;
+}
+
+.signup-text a, p {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-shadow: none;
+}
+
+.signup-text a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}

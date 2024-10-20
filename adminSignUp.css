@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: url("./img/head.jpg") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.glass-panel {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(18px);
+    /* width: 100%; */
+    width: 600px;
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 50px;
+    color: #fff;
+}
+
+.text {
+    width: 100%;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+    padding: 20px 45px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.form-group option {
+    color: #111;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border: 1px solid #fff;
+}
+
+.glass-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+.glass-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    scale: 1.1;
+}
+
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.login-text a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-text p {
+    text-shadow: none;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="adminSignUp.css">
+</head>
+
+<body>
+    <div class="glass-panel">
+        <i class="ri-apple-fill icon"></i>
+        <div class="text">
+            <h1>Step Into Leadership: Admin Sign Up</h1>
+            <form action="admin.html" >
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <!-- Role -->
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="product-manager">Product Manager</option>
+                        <option value="inventory-administrator">Inventory Administrator</option>
+                        <option value="order-management-specialist">Order Management Specialist</option>
+                        <option value="content-administrator">Content Administrator</option>
+                        <option value="sales-analyst">Sales Analyst</option>
+                    </select>
+                </div>
+                
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button type="submit" class="glass-button">Sign Up</button>
+            </form>
+
+            <!-- Already have an account link -->
+            <div class="login-text">
+                <p>Already have an account? <a href="admin.html">Login here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Get form values
+            const fullname = document.getElementById('fullname').value;
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+    
+            // Regular expressions for validation
+            const nameRegex = /^[a-zA-Z\s]+$/; // Full name and username should contain only letters and spaces
+            const usernameRegex = /^[a-zA-Z]+$/; // Username should contain only letters
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; // Valid email format
+            const phoneRegex = /^\d{10}$/; // Phone number must be exactly 10 digits
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; // Password: at least 6 characters, 1 uppercase, 1 lowercase, 1 number
+    
+            // Validate full name
+            if (!nameRegex.test(fullname)) {
+                alert("Full name should contain only letters and spaces.");
+                return false;
+            }
+    
+            // Validate username
+            if (!usernameRegex.test(username)) {
+                alert("Username should contain only letters.");
+                return false;
+            }
+    
+            // Validate email
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // Validate phone number
+            if (!phoneRegex.test(phone)) {
+                alert("Phone number must be exactly 10 digits.");
+                return false;
+            }
+    
+            // Validate password
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long, contain at least one number, one uppercase, and one lowercase letter.");
+                return false;
+            }
+    
+            // Validate confirm password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please confirm your password.");
+                return false;
+            }
+    
+            // If all validations pass
+            alert("Sign up successful!");
+            this.submit(); // Proceed with form submission
+        });
+        
+    </script>
+    
+</body>
+
+</html>
